@@ -38,36 +38,37 @@
         </div>
 
         <a href="https://www.youtube.com/@blackworldglobal" class="btn">Гледайте ни в YouTube</a>
-<div class="bank-info" style="margin-top: 40px; border-top: 1px solid #333; padding-top: 30px; text-align: left;">
-    <h2 style="color: #00ff88; text-transform: uppercase; letter-spacing: 1px; font-size: 1.5rem;">Подкрепете нашата мисия</h2>
-    <p style="color: #bbb; margin-bottom: 20px;">Вашата подкрепа ни помага да почистим планетата и да вдъхновим промяна.</p>
+ <div class="bank-info" style="background: #111; padding: 25px; border-radius: 15px; margin-top: 40px; text-align: left;">
+    <h2 style="color: #00ff88; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Подкрепете нашата мисия</h2>
+
+    <p style="color: #ddd; line-height: 1.6; font-style: italic; border-left: 2px solid #ff4444; padding-left: 15px; margin-bottom: 30px; font-size: 1.05rem;">
+        "Земята не ни принадлежи – ние само я заемаме от децата си. Но днес им оставяме свят, задушен в пластмаса. Всяка бутилка, която подминаваме, е белег, който остава за векове.<br><br>
+        <strong style="color: #00ff88;">Дари само 1€</strong>, за да ни помогнеш да изчистим това, което всички сме пренебрегнали. Помогни ни да върнем живота там, където сега има боклук."
+    </p>
 
     <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 25px;">
-        <a href="https://revolut.me/kenanzekerie" target="_blank" class="btn" style="text-decoration: none; padding: 12px 25px; font-weight: bold; background: #00ff88; color: #000; border-radius: 5px; transition: 0.3s;">
+        <a href="https://revolut.me/kenanzekerie" target="_blank" style="text-decoration: none; padding: 12px 25px; font-weight: bold; background: #00ff88; color: #000; border-radius: 5px; transition: 0.3s; display: inline-block;">
             Revolut Pay
         </a>
-        <a href="https://paypal.me/kenanZekerie" target="_blank" class="btn" style="background: #0070ba; color: white; text-decoration: none; padding: 12px 25px; font-weight: bold; border-radius: 5px; transition: 0.3s;">
+        <a href="https://paypal.me/kenanZekerie" target="_blank" style="background: #0070ba; color: white; text-decoration: none; padding: 12px 25px; font-weight: bold; border-radius: 5px; transition: 0.3s; display: inline-block;">
             PayPal
         </a>
     </div>
 
-    <div style="background: #1a1a1a; padding: 25px; border-radius: 12px; border-left: 5px solid #00ff88; position: relative;">
+    <div style="background: #1a1a1a; padding: 20px; border-radius: 12px; border-left: 5px solid #00ff88;">
         <p style="margin: 0; font-size: 0.85rem; color: #888; text-transform: uppercase;">IBAN / Банкова Сметка:</p>
-        
         <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 10px;">
             <p id="ibanText" style="margin: 0; font-family: 'Courier New', monospace; font-size: 1.1rem; color: #fff; font-weight: bold; letter-spacing: 1px;">
                 BG16IORT80481095239201
             </p>
-            
-            <button onclick="copyIBAN()" id="copyBtn" style="background: #333; color: #00ff88; border: 1px solid #00ff88; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 0.9rem; transition: 0.3s;">
+            <button onclick="copyIBAN()" id="copyBtn" style="background: #333; color: #00ff88; border: 1px solid #00ff88; padding: 8px 15px; border-radius: 5px; cursor: pointer; font-size: 0.9rem;">
                 Копирай
             </button>
         </div>
-        
         <p style="margin: 15px 0 0 0; font-size: 0.9rem; color: #bbb;">Титуляр: <strong>Kenan Zekerie</strong></p>
     </div>
-</div>
-
+ </div>
+     
 <script>
 function copyIBAN() {
     const iban = "BG16IORT80481095239201";
