@@ -6,79 +6,91 @@
     <title>Black World Global | Is this us?</title>
     <style>
         :root { --main-green: #00ff88; --bg-dark: #050505; --card-bg: #111; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-dark); color: #fff; text-align: center; margin: 0; padding: 10px; padding-bottom: 80px; line-height: 1.6; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-dark); color: #fff; text-align: center; margin: 0; padding: 0; padding-bottom: 80px; line-height: 1.6; }
         .container { max-width: 900px; margin: auto; padding: 10px; }
         
-        h1 { color: var(--main-green); text-transform: uppercase; letter-spacing: 4px; margin-top: 40px; font-size: 2.2rem; margin-bottom: 5px; }
-        .tagline { font-style: italic; color: #888; margin-bottom: 30px; font-size: 0.9rem;}
-        
+        /* НОВ HEADER С ГРАДИЕНТ */
+        .hero-header { 
+            background: linear-gradient(180deg, rgba(0,255,136,0.15) 0%, rgba(5,5,5,1) 100%); 
+            padding: 60px 20px 40px 20px; 
+            border-bottom: 1px solid #1a1a1a;
+        }
+        h1 { color: var(--main-green); text-transform: uppercase; letter-spacing: 5px; font-size: 2.2rem; margin: 0; text-shadow: 0 0 20px rgba(0,255,136,0.4); }
+        .tagline-red { text-transform: uppercase; letter-spacing: 6px; color: #ff4444; font-weight: 900; font-size: 1.1rem; margin-top: 10px; text-shadow: 0 0 10px rgba(255,68,68,0.3); }
+        .accent-line { width: 40px; height: 3px; background: var(--main-green); margin: 20px auto; border-radius: 2px; }
+
         /* СЕКЦИЯ КАУЗА */
-        .mission-box { background: rgba(0, 255, 136, 0.03); border: 1px dashed #333; padding: 25px; border-radius: 20px; margin: 30px 0; text-align: center; }
+        .mission-box { background: #0a0a0a; border: 1px solid #222; padding: 25px; border-radius: 25px; margin: 20px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
         .comparison { display: flex; gap: 15px; margin-top: 20px; align-items: flex-start; }
-        .comp-item { flex: 1; text-align: center; position: relative; }
-        .comp-item img { width: 100%; border-radius: 12px; border: 2px solid #333; }
-        .before { border-color: #ff4444 !important; }
-        .after { border-color: var(--main-green) !important; }
+        .comp-item { flex: 1; text-align: center; }
+        .comp-item img { width: 100%; border-radius: 15px; border: 2px solid #333; transition: 0.3s; }
+        .before { border-color: #ff4444 !important; filter: grayscale(0.4); }
+        .after { border-color: var(--main-green) !important; box-shadow: 0 0 15px rgba(0,255,136,0.1); }
+        .label-text { font-weight: bold; margin-top: 12px; font-size: 0.75rem; letter-spacing: 1px; }
 
-        /* ОПИСАНИЕ / МАНИФЕСТ */
-        .manifesto { text-align: left; border-left: 4px solid var(--main-green); background: linear-gradient(90deg, rgba(0,255,136,0.05) 0%, transparent 100%); padding: 25px; margin: 30px 0; border-radius: 20px; }
-        .manifesto h2 { color: var(--main-green); margin-top: 0; letter-spacing: 1px; }
+        /* МАНИФЕСТ */
+        .manifesto { text-align: left; border-left: 4px solid var(--main-green); background: linear-gradient(90deg, rgba(0,255,136,0.05) 0%, transparent 100%); padding: 25px; margin: 40px 0; border-radius: 0 20px 20px 0; }
+        .manifesto h2 { color: var(--main-green); margin-top: 0; letter-spacing: 1px; font-size: 1.4rem; }
 
-        /* КАРТА ПОРЪЧКА / МАГАЗИН */
+        /* МАГАЗИН */
         .order-card { background: var(--card-bg); border: 2px solid var(--main-green); border-radius: 25px; padding: 25px; margin: 40px 0; text-align: left; }
-        .price-tag { text-align: center; margin-bottom: 20px; }
-        .price-main { font-size: 2.8rem; font-weight: bold; color: #fff; display: block; }
-        .price-sub { color: var(--main-green); font-weight: bold; letter-spacing: 1px; }
+        .price-tag { text-align: center; margin-bottom: 25px; }
+        .price-main { font-size: 3rem; font-weight: 900; color: #fff; display: block; line-height: 1; }
+        .price-sub { color: var(--main-green); font-weight: bold; font-size: 0.9rem; }
 
-        .product-images { display: flex; gap: 15px; margin: 20px 0; justify-content: center; }
-        .product-images img { width: 48%; border-radius: 10px; border: 1px solid #333; }
+        .impact-banner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; background: #1a1a1a; padding: 20px; border-radius: 20px; margin-bottom: 30px; border: 1px solid #222; }
+        .stat-item { text-align: center; }
+        .stat-item b { font-size: 1.5rem; color: #fff; display: block; }
+        .stat-item span { font-size: 0.6rem; color: var(--main-green); text-transform: uppercase; font-weight: bold; }
+
+        .product-images { display: flex; gap: 15px; margin: 20px 0; }
+        .product-images img { width: 48%; border-radius: 12px; border: 1px solid #333; }
         
-        input, select, textarea { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #333; border-radius: 10px; background: #1a1a1a; color: #fff; box-sizing: border-box; }
-        .order-btn { width: 100%; background: var(--main-green); color: #000; padding: 20px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 1.1rem; transition: 0.3s; }
-        .order-btn:hover { transform: scale(1.02); }
+        input, select, textarea { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #333; border-radius: 12px; background: #1a1a1a; color: #fff; box-sizing: border-box; font-size: 1rem; }
+        .order-btn { width: 100%; background: var(--main-green); color: #000; padding: 22px; border: none; border-radius: 15px; font-weight: 900; cursor: pointer; text-transform: uppercase; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,255,136,0.2); }
+        .order-btn:hover { transform: translateY(-3px); box-shadow: 0 15px 30px rgba(0,255,136,0.3); }
         
-        /* ТАБЛИЦА РАЗМЕРИ */
-        table { width: 100%; color: #ccc; font-size: 0.8rem; margin-top: 15px; border-collapse: collapse; text-align: center; }
+        table { width: 100%; color: #ccc; font-size: 0.85rem; margin-top: 15px; border-collapse: collapse; text-align: center; }
         th { color: var(--main-green); padding-bottom: 10px; border-bottom: 1px solid #333; }
-        td { border-bottom: 1px solid #222; padding: 8px; }
+        td { border-bottom: 1px solid #222; padding: 10px; }
 
-        /* СТАТИСТИКА БАНЕР */
-        .impact-banner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; background: #1a1a1a; padding: 20px; border-radius: 20px; margin-bottom: 30px; }
-        .stat-item { flex: 1; text-align: center; }
-        .stat-item b { font-size: 1.6rem; font-weight: bold; color: #fff; display: block; }
-        .stat-item span { font-size: 0.6rem; color: var(--main-green); text-transform: uppercase; }
-
-        /* СОЦИАЛНИ МРЕЖИ */
-        .social-link { display: inline-block; margin: 0 12px; color: #888; text-decoration: none; font-size: 1rem; transition: 0.3s; }
-        .social-link:hover { color: var(--main-green); }
-
-        /* ПОДКРЕПА БУТОНИ */
-        .donate-btn { flex: 1; background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 15px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1rem; transition: 0.3s; text-align: center; }
+        /* ПОДКРЕПА */
+        .donate-btn { flex: 1; background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; text-align: center; }
         .donate-btn:hover { background: rgba(0,255,136,0.1); }
         .d-green { background: var(--main-green) !important; color: #000 !important; }
 
-        /* VIBER БУТОН */
-        .viber-btn { position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; border-radius: 50%; background: #7360f2; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-weight: bold; box-shadow: 0 5px 15px rgba(0,0,0,0.5); z-index: 1000; }
+        .social-link { display: inline-block; margin: 0 15px; color: #666; text-decoration: none; font-size: 1rem; font-weight: bold; transition: 0.3s; }
+        .social-link:hover { color: var(--main-green); }
+
+        .viber-btn { position: fixed; bottom: 25px; right: 25px; width: 65px; height: 65px; border-radius: 50%; background: #7360f2; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-weight: bold; box-shadow: 0 8px 25px rgba(0,0,0,0.6); z-index: 1000; transition: 0.3s; }
+        .viber-btn:hover { transform: scale(1.1); }
     </style>
 </head>
 <body>
 
     <a href="viber://chat?number=%2B359884166258" class="viber-btn">Viber</a>
 
-    <div class="container">
+    <div class="hero-header">
         <h1>Black World Global</h1>
-        <p class="tagline">това ли сме ние?</p>
+        <p class="tagline-red">това ли сме ние?</p>
+        <div class="accent-line"></div>
+        <p style="max-width: 600px; margin: auto; color: #888; font-size: 0.95rem;">
+            Едно движение срещу безразличието. <br>Чистим природата, засаждаме бъдеще.
+        </p>
+    </div>
 
+    <div class="container">
+        
         <div class="mission-box">
-            <h2 style="color: var(--main-green); margin-top: 0;">НАШАТА КАУЗА</h2>
+            <h2 style="color: var(--main-green); margin-top: 0; letter-spacing: 2px; font-size: 1.1rem;">РЕАЛНОСТТА, КОЯТО ПРОМЕНЯМЕ</h2>
             <div class="comparison">
                 <div class="comp-item">
                     <img src="Picsart_26-03-19_09-57-34-925.jpg" alt="Преди" class="before">
-                    <p style="color: #ff4444; font-weight: bold; margin-top: 8px;">ПРЕДИ</p>
+                    <p class="label-text" style="color: #ff4444;">🛑 ПРЕДИ (ЗАМЪРСЯВАНЕ)</p>
                 </div>
                 <div class="comp-item">
                     <img src="file_0000000074e47243a9d814cf1ef6a2a3~2.png" alt="След" class="after">
-                    <p style="color: var(--main-green); font-weight: bold; margin-top: 8px;">СЛЕД</p>
+                    <p class="label-text" style="color: var(--main-green);">✅ СЛЕД (ВЪЗСТАНОВЯВАНЕ)</p>
                 </div>
             </div>
         </div>
@@ -106,8 +118,8 @@
                 <img src="1774862857379~2.png" alt="Гръб">
             </div>
 
-            <div style="background: #1a1a1a; padding: 15px; border-radius: 15px; margin-bottom: 20px; text-align: left;">
-                <h4 style="margin: 0 0 10px 0; color: var(--main-green);">📐 ТАБЛИЦА С РАЗМЕРИ (см):</h4>
+            <div style="background: #000; padding: 20px; border-radius: 15px; margin-bottom: 25px; border: 1px solid #222;">
+                <h4 style="margin: 0 0 15px 0; color: var(--main-green); font-size: 0.9rem; letter-spacing: 1px;">📐 ТАБЛИЦА С РАЗМЕРИ (см):</h4>
                 <table>
                     <tr><th>Размер</th><th>Ширина</th><th>Дължина</th></tr>
                     <tr><td>S</td><td>48 см</td><td>69 см</td></tr>
@@ -126,55 +138,55 @@
                 </select>
                 <textarea name="Адрес" placeholder="Офис на Еконт/Спиди" required style="height: 100px;"></textarea>
                 <button type="submit" id="submitBtn" class="order-btn">ПОРЪЧАЙ С КАУЗА 🌍</button>
-                <p style="font-size: 0.7rem; color: #666; text-align: center; margin-top: 10px;">✓ Наложен платеж при доставка</p>
+                <p style="font-size: 0.75rem; color: #555; text-align: center; margin-top: 15px;">✓ Плащане при доставка (Наложен платеж)</p>
             </form>
         </div>
 
-        <div class="container" style="background: var(--card-bg); border: 1px solid var(--main-green); border-radius: 20px; padding: 25px; margin: 30px 0;">
-            <h2 style="color: var(--main-green); margin-top: 0; font-size: 1.3rem;">ПОДКРЕПЕТЕ НИ</h2>
+        <div style="background: #0a0a0a; border: 1px solid var(--main-green); border-radius: 30px; padding: 30px; margin: 40px 0;">
+            <h2 style="color: var(--main-green); margin-top: 0;">ПОДКРЕПЕТЕ НИ</h2>
             
-            <div style="margin-bottom: 25px; padding: 15px; background: rgba(0,255,136,0.05); border-radius: 15px; border: 1px solid rgba(0,255,136,0.2);">
-                <p style="color: var(--main-green); font-weight: bold; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1px; margin-bottom: 15px;">Всеки цент е действие:</p>
+            <div style="margin-bottom: 30px; padding: 20px; background: rgba(0,255,136,0.03); border-radius: 20px; border: 1px solid rgba(0,255,136,0.1);">
+                <p style="color: var(--main-green); font-weight: bold; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 1.5px; margin-bottom: 20px;">Всеки цент е действие:</p>
                 <div style="display: flex; justify-content: space-around; text-align: center; gap: 5px;">
                     <div style="flex: 1;">
-                        <span style="font-size: 1.5rem; display: block;">🗑️</span>
-                        <b style="color: #fff; font-size: 1.1rem;">1€</b>
-                        <p style="font-size: 0.7rem; color: #888; margin: 5px 0;">= 1 голям чувал за боклук</p>
+                        <span style="font-size: 1.8rem; display: block;">🗑️</span>
+                        <b style="color: #fff; font-size: 1.2rem;">1€</b>
+                        <p style="font-size: 0.65rem; color: #777; margin: 8px 0;">= 1 голям чувал за боклук</p>
                     </div>
                     <div style="flex: 1; border-left: 1px solid #222; border-right: 1px solid #222; padding: 0 5px;">
-                        <span style="font-size: 1.5rem; display: block;">🗑️🗑️</span>
-                        <b style="color: #fff; font-size: 1.1rem;">2€</b>
-                        <p style="font-size: 0.7rem; color: #888; margin: 5px 0;">= 2 чувала за почистване</p>
+                        <span style="font-size: 1.8rem; display: block;">🗑️🗑️</span>
+                        <b style="color: #fff; font-size: 1.2rem;">2€</b>
+                        <p style="font-size: 0.65rem; color: #777; margin: 8px 0;">= 2 чувала за почистване</p>
                     </div>
                     <div style="flex: 1;">
-                        <span style="font-size: 1.5rem; display: block;">🌳</span>
-                        <b style="color: #fff; font-size: 1.1rem;">5€</b>
-                        <p style="font-size: 0.7rem; color: #888; margin: 5px 0;">= 1 новозасадено дръвче</p>
+                        <span style="font-size: 1.8rem; display: block;">🌳</span>
+                        <b style="color: #fff; font-size: 1.2rem;">5€</b>
+                        <p style="font-size: 0.65rem; color: #777; margin: 8px 0;">= 1 новозасадено дръвче</p>
                     </div>
                 </div>
             </div>
 
-            <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <div style="display: flex; gap: 12px; margin-bottom: 25px;">
                 <a href="https://paypal.me/kenanZekerie/1" target="_blank" class="donate-btn">1€</a>
                 <a href="https://paypal.me/kenanZekerie/2" target="_blank" class="donate-btn">2€</a>
                 <a href="https://paypal.me/kenanZekerie/5" target="_blank" class="donate-btn d-green">5€</a>
             </div>
 
-            <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 15px; border: 1px solid #222; text-align: left; margin-bottom: 20px;">
-                <p style="margin: 0; font-size: 0.6rem; color: #888; text-transform: uppercase;">IBAN Сметка:</p>
-                <p style="margin: 5px 0; font-family: monospace; font-size: 1rem; color: var(--main-green); font-weight: bold; overflow-wrap: break-word;">BG16IORT80481095239201</p>
-                <button onclick="copyIBAN()" id="copyBtn" style="background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 5px 10px; border-radius: 6px; cursor: pointer; font-size: 0.75rem;">Копирай IBAN</button>
+            <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 15px; border: 1px solid #222; text-align: left; margin-bottom: 25px;">
+                <p style="margin: 0; font-size: 0.6rem; color: #666; text-transform: uppercase;">IBAN Сметка за дарения:</p>
+                <p style="margin: 8px 0; font-family: monospace; font-size: 1.1rem; color: var(--main-green); font-weight: bold; overflow-wrap: break-word;">BG16IORT80481095239201</p>
+                <button onclick="copyIBAN()" id="copyBtn" style="background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 8px 15px; border-radius: 8px; cursor: pointer; font-size: 0.8rem; font-weight: bold;">Копирай IBAN</button>
             </div>
 
-            <div style="font-size: 0.9rem;">
+            <div style="font-size: 0.95rem; border-top: 1px solid #222; padding-top: 20px;">
                 <a href="https://paypal.me/kenanZekerie" target="_blank" style="color: #0070ba; text-decoration: none; font-weight: bold;">PayPal / Card Pay</a>
-                &nbsp;&nbsp;|&nbsp;&nbsp;
+                <span style="color: #333; margin: 0 15px;">|</span>
                 <a href="https://revolut.me/kenanZekerie" target="_blank" style="color: #fff; text-decoration: none; font-weight: bold; border-bottom: 1px solid #fff;">Revolut.Me</a>
             </div>
         </div>
 
-        <div style="margin: 40px 0;">
-            <p style="color: #666; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 15px;">Последвай промяната:</p>
+        <div style="margin: 60px 0 20px 0;">
+            <p style="color: #444; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 2px; margin-bottom: 20px;">Последвай движението:</p>
             <a href="https://www.tiktok.com/@black.world5024" target="_blank" class="social-link">TikTok</a>
             <a href="https://www.youtube.com/@BlackWorldglobal" target="_blank" class="social-link">YouTube</a>
             <a href="https://x.com/@BlackWorldgl" target="_blank" class="social-link">X (Twitter)</a>
@@ -187,7 +199,13 @@
         navigator.clipboard.writeText(iban).then(() => {
             const btn = document.getElementById('copyBtn');
             btn.innerHTML = "Копирано! ✅";
-            setTimeout(() => { btn.innerHTML = "Копирай IBAN"; }, 2000);
+            btn.style.borderColor = "#fff";
+            btn.style.color = "#fff";
+            setTimeout(() => { 
+                btn.innerHTML = "Копирай IBAN"; 
+                btn.style.borderColor = "var(--main-green)";
+                btn.style.color = "var(--main-green)";
+            }, 2000);
         });
     }
 
