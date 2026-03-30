@@ -10,7 +10,7 @@
         h1 { color: #00ff88; text-transform: uppercase; letter-spacing: 3px; margin-top: 40px; font-size: 2.2rem; margin-bottom: 5px; }
         .tagline { font-style: italic; color: #888; margin-bottom: 30px; font-size: 0.9rem;}
         
-        /* КАУЗА */
+        /* СЕКЦИЯ КАУЗА */
         .mission-box { background: rgba(0, 255, 136, 0.03); border: 1px dashed #333; padding: 25px; border-radius: 20px; margin: 30px 0; text-align: center; }
         .comparison { display: flex; gap: 15px; margin-top: 20px; align-items: flex-start; }
         .comp-item { flex: 1; text-align: center; }
@@ -18,7 +18,12 @@
         .before { border-color: #ff4444 !important; }
         .after { border-color: #00ff88 !important; }
 
-        /* ПОРЪЧКА */
+        /* ОПИСАНИЕ / ЗА НАС */
+        .about-us { text-align: left; background: #111; border-radius: 20px; padding: 25px; border-left: 5px solid #00ff88; margin: 30px 0; }
+        .about-us h2 { color: #00ff88; margin-top: 0; letter-spacing: 1px; }
+        .about-us p { line-height: 1.6; color: #eee; font-size: 1.05rem; }
+
+        /* КАРТА ПОРЪЧКА */
         .order-card { background: #111; border: 2px solid #00ff88; border-radius: 25px; padding: 25px; margin: 40px 0; text-align: left; }
         .price-tag { text-align: center; margin-bottom: 20px; }
         .price-main { font-size: 2.5rem; font-weight: bold; color: #fff; display: block; }
@@ -30,6 +35,17 @@
         input, select, textarea { width: 100%; padding: 14px; margin: 10px 0; border: 1px solid #333; border-radius: 10px; background: #1a1a1a; color: #fff; box-sizing: border-box; }
         .order-btn { width: 100%; background: #00ff88; color: #000; padding: 20px; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; text-transform: uppercase; font-size: 1.1rem; }
         
+        /* СТАТИСТИКА БАНЕР */
+        .impact-banner { display: flex; gap: 10px; background: rgba(0, 255, 136, 0.05); border: 1px dashed #333; border-radius: 15px; padding: 15px; margin-bottom: 25px; }
+        .stat-item { flex: 1; text-align: center; }
+        .stat-item span:first-child { font-size: 1.6rem; font-weight: bold; color: #fff; display: block; }
+        .stat-item span:last-child { font-size: 0.6rem; color: #00ff88; text-transform: uppercase; }
+
+        /* КОНТАКТИ */
+        .contact-section { background: #111; border: 1px solid #333; border-radius: 20px; padding: 20px; margin: 20px 0; text-align: left; }
+        .contact-link { display: flex; align-items: center; color: #ddd; text-decoration: none; margin: 10px 0; font-size: 1.1rem; }
+        .contact-link span { color: #00ff88; margin-right: 15px; font-size: 1.4rem; }
+
         /* ПОДКРЕПА */
         .bank-info { background: #111; padding: 25px; border-radius: 20px; border: 1px solid #333; margin-top: 40px; text-align: center; }
         .donation-grid { display: flex; gap: 10px; margin: 20px 0; }
@@ -58,7 +74,6 @@
 
         <div class="mission-box">
             <h2 style="color: #00ff88; margin-top: 0;">НАШАТА КАУЗА</h2>
-            <p style="color: #ccc;">Всяка поръчка помага за почистването на природата.</p>
             <div class="comparison">
                 <div class="comp-item">
                     <img src="Picsart_26-03-19_09-57-34-925.jpg" alt="Преди" class="before">
@@ -71,15 +86,45 @@
             </div>
         </div>
 
+        <div class="about-us">
+            <h2>ВДИГНИ ПОГЛЕД!</h2>
+            <p>
+                Живеем в свят, в който погледите ни са забити в екраните, докато светът около нас се дави в пластмаса и безразличие. Време е да оставим телефоните и да видим реалността – <strong>изсечените гори и тоновете отпадъци</strong> в домовете на дивите животни.
+            </p>
+            <p>
+                Ние от <strong>Black World Global</strong> не просто чистим. Част от средствата от всяка поръчка и дарение се влагат директно в <strong>засаждане на нови дръвчета</strong>. Нашата мисия е да върнем зеленото там, където е било унищожено. 
+            </p>
+            <p style="color: #00ff88; font-weight: bold; font-style: italic; border-top: 1px solid #222; padding-top: 10px; margin-top: 15px;">
+                Спри да скролваш. Погледни наоколо. Помогни ни да възродим българската природа – чрез почистване и залесяване.
+            </p>
+        </div>
+
         <div class="order-card" id="shop">
             <div class="price-tag">
                 <span class="price-main">24.99€</span>
                 <span class="price-sub">+ ПОДАРЪК КЪМ ВСЯКА ПОРЪЧКА 🎁</span>
             </div>
+
+            <div class="impact-banner">
+                <div class="stat-item">
+                    <span>15+</span>
+                    <span>МЕСТА 🌳</span>
+                </div>
+                <div class="stat-item" style="border-left: 1px solid #333; border-right: 1px solid #333;">
+                    <span>850 кг</span>
+                    <span>БОКЛУК 🗑️</span>
+                </div>
+                <div class="stat-item">
+                    <span>100+</span>
+                    <span>ДРЪВЧЕТА 🌱</span>
+                </div>
+            </div>
+
             <div class="product-images">
                 <img src="1774862857379~3.png" alt="Лице">
                 <img src="1774862857379~2.png" alt="Гръб">
             </div>
+
             <form id="orderForm" action="https://formspree.io/f/mojpdenk" method="POST">
                 <input type="text" name="Име" placeholder="Име и Фамилия" required>
                 <input type="tel" name="Телефон" placeholder="Телефон за потвърждение" required>
@@ -92,19 +137,23 @@
             </form>
         </div>
 
+        <div class="contact-section">
+            <h3 style="color: #00ff88; margin-top: 0; font-size: 1.2rem;">Връзка с нас</h3>
+            <a href="tel:+359884166258" class="contact-link"><span>📞</span> 0884 166 258</a>
+            <a href="mailto:blackworld.global@gmail.com" class="contact-link"><span>✉️</span> blackworld.global@gmail.com</a>
+        </div>
+
         <div class="bank-info">
             <h2 style="color: #00ff88; margin-top: 0;">ПОДКРЕПЕТЕ НИ</h2>
             <div class="donation-grid">
                 <a href="https://paypal.me/kenanZekerie/1" target="_blank" class="donate-btn d-outline">Дари 1€</a>
                 <a href="https://paypal.me/kenanZekerie/5" target="_blank" class="donate-btn d-green">Дари 5€</a>
             </div>
-
             <div style="background: #1a1a1a; padding: 15px; border-radius: 12px; border-left: 5px solid #00ff88; text-align: left; margin-bottom: 20px;">
                 <p style="margin: 0 0 5px 0; font-size: 0.7rem; color: #666;">IBAN ЗА ДАРЕНИЯ:</p>
                 <p style="margin: 0; font-family: monospace; font-size: 1rem; font-weight: bold;">BG16IORT80481095239201</p>
                 <button onclick="copyIBAN()" id="copyBtn" style="background: transparent; color: #00ff88; border: 1px solid #00ff88; padding: 5px 10px; border-radius: 5px; cursor: pointer; margin-top: 10px; font-size: 0.8rem;">Копирай IBAN</button>
             </div>
-
             <div style="text-align: center;">
                 <a href="https://paypal.me/kenanZekerie" target="_blank" class="pay-link paypal">PayPal.Me</a>
                 <a href="https://revolut.me/kenanZekerie" target="_blank" class="pay-link revolut">Revolut.Me</a>
@@ -144,3 +193,5 @@ form.onsubmit = async (e) => {
 </script>
 </body>
 </html>
+
+ 
