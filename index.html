@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Black World Global</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #050505; color: #fff; text-align: center; margin: 0; padding: 10px; }
+        .container { max-width: 900px; margin: auto; padding: 10px; }
+        h1 { color: #00ff88; text-transform: uppercase; letter-spacing: 3px; margin-top: 40px; font-size: 2.2rem; }
+        .tagline { font-style: italic; color: #888; margin-bottom: 30px; }
+        p { font-size: 1.1rem; line-height: 1.6; color: #ddd; }
+        
+        /* Секция Продукт */
+        .order-card { background: #111; border: 2px solid #00ff88; border-radius: 20px; padding: 25px; margin: 40px 0; text-align: left; box-shadow: 0 0 20px rgba(0,255,136,0.1); }
+        .product-images { display: flex; gap: 15px; margin: 20px 0; justify-content: center; }
+        .product-images img { width: 48%; border-radius: 10px; border: 1px solid #333; }
+        
+        /* Форма */
+        input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #333; border-radius: 8px; background: #1a1a1a; color: #fff; box-sizing: border-box; font-size: 1rem; }
+        input:focus { border-color: #00ff88; outline: none; }
+        .order-btn { width: 100%; background: #00ff88; color: #000; padding: 18px; border: none; border-radius: 10px; font-weight: bold; font-size: 1.2rem; cursor: pointer; text-transform: uppercase; margin-top: 10px; transition: 0.3s; }
+        .order-btn:hover { background: #00cc6e; transform: scale(1.02); }
+
+        .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 40px 0; }
+        .gallery-item { flex: 1; min-width: 280px; max-width: 450px; }
+        .gallery img { width: 100%; border-radius: 15px; border: 2px solid #222; }
+        .btn { display: inline-block; background: #00ff88; color: #000; padding: 15px 30px; text-decoration: none; font-weight: bold; border-radius: 50px; margin: 20px 0; }
+        .bank-info { background: #111; padding: 25px; border-radius: 20px; border: 1px solid #333; margin-top: 40px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Black World Global</h1>
+        <p class="tagline">Is this us? / Това ли сме ние?</p>
+        
+        <p>Нашата мисия е да почистим планетата и да вдъхновим промяна. Вижте разликата, която правим заедно.</p>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="Picsart_26-03-19_09-57-34-925.jpg" alt="Проблемът">
+                <p>Проблемът (Преди)</p>
+            </div>
+            <div class="gallery-item">
+                <img src="file_0000000074e47243a9d814cf1ef6a2a3~2.png" alt="Нашата работа">
+                <p>Нашата работа (След)</p>
+            </div>
+        </div>
+
+        <a href="https://www.youtube.com/@blackworldglobal" class="btn">Гледайте ни в YouTube</a>
+
+        <div class="order-card" id="shop">
+            <h2 style="color: #00ff88; text-align: center; margin-top: 0;">ВЗЕМИ ТЕНИСКА + ПОДАРЪК</h2>
+            <p style="text-align: center; font-size: 0.95rem; color: #aaa;">Подкрепи почистването и получи професионална щипка за смет!</p>
+            
+            <div class="product-images">
+                <img src="1774862857379~3.png" alt="BW Лице">
+                <img src="1774862857379~2.png" alt="BW Гръб">
+            </div>
+
+            <form action="https://formspree.io/f/mojpdenk" method="POST">
+                <input type="text" name="Име" placeholder="Име и Фамилия" required>
+                <input type="tel" name="Телефон" placeholder="Телефон за потвърждение" required>
+                
+                <select name="Размер" required>
+                    <option value="" disabled selected>Избери размер на тениската</option>
+                    <option value="S">Размер S</option>
+                    <option value="M">Размер M</option>
+                    <option value="L">Размер L</option>
+                    <option value="XL">Размер XL</option>
+                    <option value="XXL">Размер XXL</option>
+                </select>
+
+                <textarea name="Адрес" placeholder="Доставка до Град и Офис на Еконт/Спиди" required style="height: 80px;"></textarea>
+                
+                <div style="font-size: 0.85rem; color: #888; background: #1a1a1a; padding: 10px; border-radius: 5px; margin: 10px 0;">
+                    🚚 Плащане при получаване (Наложен платеж). Включен подарък: Щипка.
+                </div>
+
+                <button type="submit" class="order-btn">Поръчай сега 🌍</button>
+            </form>
+        </div>
+
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; margin: 50px 0; padding: 25px; background: rgba(0,255,136,0.05); border-radius: 15px; border: 1px solid rgba(0,255,136,0.1);">
+            <div style="text-align: center;">
+                <h3 style="color: #00ff88; font-size: 2.5rem; margin: 0;">15+</h3>
+                <p style="color: #aaa; margin: 5px 0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Локации</p>
+            </div>
+            <div style="text-align: center;">
+                <h3 style="color: #00ff88; font-size: 2.5rem; margin: 0;">500+</h3>
+                <p style="color: #aaa; margin: 5px 0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">кг Боклук</p>
+            </div>
+            <div style="text-align: center;">
+                <h3 style="color: #00ff88; font-size: 2.5rem; margin: 0;">20+</h3>
+                <p style="color: #aaa; margin: 5px 0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Доброволци</p>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 50px; text-align: left;">
+            <h2 style="color: #00ff88; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 1.2rem;">Как работим?</h2>
+            <div style="margin-top: 20px;">
+                <div style="margin-bottom: 25px; border-left: 2px solid #00ff88; padding-left: 15px;">
+                    <h4 style="color: #fff; margin: 0 0 5px 0;">1. Локация</h4>
+                    <p style="color: #bbb; margin: 0; font-size: 0.95rem;">Намираме най-замърсените места чрез сигнали и проучвания.</p>
+                </div>
+                <div style="margin-bottom: 25px; border-left: 2px solid #00ff88; padding-left: 15px;">
+                    <h4 style="color: #fff; margin: 0 0 5px 0;">2. Акция</h4>
+                    <p style="color: #bbb; margin: 0; font-size: 0.95rem;">Организираме екип и събираме всеки отпадък ръчно.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bank-info" style="text-align: left;">
+            <h2 style="color: #00ff88; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;">Подкрепете нашата мисия</h2>
+            <p style="color: #ddd; line-height: 1.6; font-style: italic; border-left: 2px solid #ff4444; padding-left: 15px; margin-bottom: 30px;">
+                "Дари само 1€, за да ни помогнеш да изчистим това, което всички сме пренебрегнали."
+            </p>
+            <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 25px;">
+                <a href="https://revolut.me/kenanzekerie" target="_blank" style="text-decoration: none; padding: 12px 25px; font-weight: bold; background: #00ff88; color: #000; border-radius: 5px;">Revolut Pay</a>
+                <a href="https://paypal.me/kenanZekerie" target="_blank" style="background: #0070ba; color: white; text-decoration: none; padding: 12px 25px; font-weight: bold; border-radius: 5px;">PayPal</a>
+            </div>
+            <div style="background: #1a1a1a; padding: 20px; border-radius: 12px; border-left: 5px solid #00ff88;">
+                <p id="ibanText" style="margin: 0; font-family: 'Courier New', monospace; font-size: 1.1rem; color: #fff; font-weight: bold;">BG16IORT80481095239201</p>
+                <button onclick="copyIBAN()" id="copyBtn" style="background: #333; color: #00ff88; border: 1px solid #00ff88; padding: 8px 15px; border-radius: 5px; cursor: pointer; margin-top: 10px;">Копирай</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+function copyIBAN() {
+    const iban = "BG16IORT80481095239201";
+    const btn = document.getElementById('copyBtn');
+    navigator.clipboard.writeText(iban).then(() => {
+        btn.innerHTML = "Копирано!";
+        btn.style.background = "#00ff88"; btn.style.color = "#000";
+        setTimeout(() => { btn.innerHTML = "Копирай"; btn.style.background = "#333"; btn.style.color = "#00ff88"; }, 2000);
+    });
+}
+</script>
+</body>
+</html>
