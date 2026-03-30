@@ -16,6 +16,11 @@
         .product-images { display: flex; gap: 15px; margin: 20px 0; justify-content: center; }
         .product-images img { width: 48%; border-radius: 10px; border: 1px solid #333; }
         
+        /* Цена Стил */
+        .price-tag { text-align: center; margin: 20px 0; }
+        .old-price { font-size: 1.2rem; color: #888; text-decoration: line-through; margin-right: 10px; }
+        .new-price { font-size: 2.5rem; color: #00ff88; font-weight: bold; }
+
         /* Форма */
         input, select, textarea { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #333; border-radius: 8px; background: #1a1a1a; color: #fff; box-sizing: border-box; font-size: 1rem; }
         input:focus { border-color: #00ff88; outline: none; }
@@ -58,6 +63,12 @@
                 <img src="1774862857379~2.png" alt="BW Гръб">
             </div>
 
+            <div class="price-tag">
+                <span class="old-price">34.99€</span>
+                <span class="new-price">24.99€</span>
+                <p style="color: #00ff88; font-size: 0.85rem; margin-top: 5px;">🎁 ВКЛЮЧЕН ПОДАРЪК: Професионална щипка</p>
+            </div>
+
             <form action="https://formspree.io/f/mojpdenk" method="POST">
                 <input type="text" name="Име" placeholder="Име и Фамилия" required>
                 <input type="tel" name="Телефон" placeholder="Телефон за потвърждение" required>
@@ -73,11 +84,12 @@
 
                 <textarea name="Адрес" placeholder="Доставка до Град и Офис на Еконт/Спиди" required style="height: 80px;"></textarea>
                 
-                <div style="font-size: 0.85rem; color: #888; background: #1a1a1a; padding: 10px; border-radius: 5px; margin: 10px 0;">
-                    🚚 Плащане при получаване (Наложен платеж). Включен подарък: Щипка.
+                <div style="font-size: 0.85rem; color: #888; background: #1a1a1a; padding: 15px; border-radius: 8px; margin: 10px 0; border-left: 3px solid #00ff88;">
+                    🚚 <strong>Доставка:</strong> Наложен платеж (в лева по курса на деня).<br>
+                    🌍 <strong>Кауза:</strong> Приходите отиват директно за екологични акции!
                 </div>
 
-                <button type="submit" class="order-btn">Поръчай сега 🌍</button>
+                <button type="submit" class="order-btn">ПОРЪЧАЙ СЕГА 🌍</button>
             </form>
         </div>
 
@@ -93,20 +105,6 @@
             <div style="text-align: center;">
                 <h3 style="color: #00ff88; font-size: 2.5rem; margin: 0;">20+</h3>
                 <p style="color: #aaa; margin: 5px 0; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Доброволци</p>
-            </div>
-        </div>
-
-        <div style="margin-bottom: 50px; text-align: left;">
-            <h2 style="color: #00ff88; text-transform: uppercase; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 1.2rem;">Как работим?</h2>
-            <div style="margin-top: 20px;">
-                <div style="margin-bottom: 25px; border-left: 2px solid #00ff88; padding-left: 15px;">
-                    <h4 style="color: #fff; margin: 0 0 5px 0;">1. Локация</h4>
-                    <p style="color: #bbb; margin: 0; font-size: 0.95rem;">Намираме най-замърсените места чрез сигнали и проучвания.</p>
-                </div>
-                <div style="margin-bottom: 25px; border-left: 2px solid #00ff88; padding-left: 15px;">
-                    <h4 style="color: #fff; margin: 0 0 5px 0;">2. Акция</h4>
-                    <p style="color: #bbb; margin: 0; font-size: 0.95rem;">Организираме екип и събираме всеки отпадък ръчно.</p>
-                </div>
             </div>
         </div>
 
