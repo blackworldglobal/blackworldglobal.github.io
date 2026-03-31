@@ -54,14 +54,12 @@
         th { color: var(--main-green); border-bottom: 1px solid #333; padding-bottom: 10px;}
         td { border-bottom: 1px solid #222; padding: 10px; }
 
-        /* Бутони за дарения */
-        .donate-row { display: flex; gap: 10px; margin-bottom: 15px; justify-content: center; }
-        .donate-btn { flex: 1; background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 15px 5px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: 0.3s; text-align: center; display: flex; align-items: center; justify-content: center; }
+        .donate-btn { flex: 1; background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; text-align: center; }
         .d-green { background: var(--main-green) !important; color: #000 !important; }
         .d-white { border-color: #fff !important; color: #fff !important; }
 
-        .contact-link { color: var(--main-green); text-decoration: none; display: block; margin: 10px 0; font-size: 1.1rem; font-weight: bold; }
         .viber-btn { position: fixed; bottom: 25px; right: 25px; width: 65px; height: 65px; border-radius: 50%; background: #7360f2; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-weight: bold; z-index: 1000; box-shadow: 0 8px 25px rgba(0,0,0,0.6); }
+        .contact-link { color: var(--main-green); text-decoration: none; display: block; margin: 10px 0; font-size: 1.1rem; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -71,7 +69,9 @@
     <div class="hero-header">
         <h1>Black World Global</h1>
         <p class="tagline-red">това ли сме ние?</p>
-        <div class="problem-frame"><img src="1774900514499~2.png" alt="Проблемът"></div>
+        <div class="problem-frame">
+            <img src="1774900514499~2.png" alt="Проблемът">
+        </div>
         <div class="accent-line"></div>
         <p style="max-width: 600px; margin: auto; color: #888; font-style: italic;">"Всички гледат... но никой не вижда."</p>
     </div>
@@ -81,8 +81,14 @@
         <div class="mission-box">
             <h2 style="color: var(--main-green); margin-top: 0; letter-spacing: 2px;">РЕАЛНОСТТА, КОЯТО ПРОМЕНЯМЕ</h2>
             <div class="comparison">
-                <div class="comp-item"><img src="Picsart_26-03-19_09-57-34-925.jpg" alt="Преди" class="before"><p style="color:#ff4444; font-weight:bold;">🛑 ПРЕДИ</p></div>
-                <div class="comp-item"><img src="1774902057174~2.png" alt="След" class="after"><p style="color:var(--main-green); font-weight:bold;">✅ СЛЕД</p></div>
+                <div class="comp-item">
+                    <img src="Picsart_26-03-19_09-57-34-925.jpg" alt="Преди" class="before">
+                    <p style="color:#ff4444; font-weight:bold;">🛑 ПРЕДИ</p>
+                </div>
+                <div class="comp-item">
+                    <img src="1774902057174~2.png" alt="След" class="after">
+                    <p style="color:var(--main-green); font-weight:bold;">✅ СЛЕД</p>
+                </div>
             </div>
         </div>
 
@@ -140,20 +146,29 @@
         </div>
 
         <div style="background: #0a0a0a; border: 1px solid var(--main-green); border-radius: 30px; padding: 30px; margin: 40px 0;">
-            <h2 style="color: var(--main-green); margin-bottom: 20px;">ПОДКРЕПЕТЕ НИ</h2>
+            <h2 style="color: var(--main-green);">ПОДКРЕПЕТЕ НИ</h2>
             
-            <div class="donate-row">
+            <p style="margin-bottom: 10px;">1€ = 🗑️ 1 чувал с боклук</p>
+            <div style="display: flex; gap: 12px; margin-bottom: 20px;">
                 <a href="https://paypal.me/kenanZekerie/1" target="_blank" class="donate-btn">1€</a>
+            </div>
+
+            <p style="margin-bottom: 10px;">2€ = 🗑️🗑️ 2 чувала с боклук</p>
+            <div style="display: flex; gap: 12px; margin-bottom: 20px;">
                 <a href="https://paypal.me/kenanZekerie/2" target="_blank" class="donate-btn">2€</a>
+            </div>
+
+            <p style="margin-bottom: 10px;">5€ = 🌱 1 засадено дръвче</p>
+            <div style="display: flex; gap: 12px; margin-bottom: 25px;">
                 <a href="https://paypal.me/kenanZekerie/5" target="_blank" class="donate-btn d-green">5€</a>
             </div>
 
-            <div class="donate-row">
+            <div style="display: flex; gap: 12px; margin-bottom: 25px;">
                 <a href="https://paypal.me/kenanZekerie" target="_blank" class="donate-btn">PAYPAL</a>
                 <a href="https://revolut.me/kenanZekerie" target="_blank" class="donate-btn d-white">REVOLUT</a>
             </div>
 
-            <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 15px; border: 1px solid #222; text-align: left; margin-top: 20px;">
+            <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 15px; border: 1px solid #222; text-align: left;">
                 <p style="margin: 0; font-size: 0.6rem; color: #666;">IBAN Сметка:</p>
                 <p style="margin: 8px 0; font-family: monospace; font-size: 1.1rem; color: var(--main-green); font-weight: bold; overflow-wrap: break-word;">BG16IORT80481095239201</p>
                 <button onclick="copyIBAN()" id="copyBtn" style="background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 8px 15px; border-radius: 8px; cursor: pointer;">Копирай IBAN</button>
@@ -204,4 +219,5 @@
     };
 </script>
 </body>
-</html>
+    </html>
+    
