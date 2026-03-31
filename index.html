@@ -49,7 +49,6 @@
         
         input, select, textarea { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #333; border-radius: 12px; background: #1a1a1a; color: #fff; box-sizing: border-box; font-size: 1rem; }
         
-        /* НОВА АНИМАЦИЯ ЗА БУТОНА (PULSE) */
         .order-btn { 
             width: 100%; 
             background: var(--main-green); 
@@ -62,7 +61,7 @@
             text-transform: uppercase; 
             font-size: 1.2rem; 
             transition: 0.3s;
-            animation: pulse-green 2s infinite;
+            animation: pulse-green 1.5s infinite;
         }
         @keyframes pulse-green {
             0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
@@ -78,15 +77,13 @@
         .d-green { background: var(--main-green) !important; color: #000 !important; }
         .d-white { border-color: #fff !important; color: #fff !important; }
 
-        /* ОБНОВЕН VIBER БУТОН */
         .viber-btn { position: fixed; bottom: 25px; right: 25px; width: 65px; height: 65px; border-radius: 50%; background: #7360f2; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-weight: bold; z-index: 1000; box-shadow: 0 8px 25px rgba(0,0,0,0.6); }
         .contact-link { color: var(--main-green); text-decoration: none; display: block; margin: 10px 0; font-size: 1.1rem; font-weight: bold; }
 
-        /* НОВИ СТИЛОВЕ ЗА ДОВЕРИЕ И РЕВЮТА */
-        .trust-list { background: #000; padding: 15px; border-radius: 15px; border: 1px solid #222; margin: 20px 0; list-style: none; padding-left: 0; font-size: 0.9rem; text-align: left; }
-        .trust-list li { margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
-        .review-box { background: #0a0a0a; padding: 20px; border-radius: 20px; border: 1px solid #222; margin: 20px 0; text-align: left; }
-        .stars { color: #ffcc00; margin-bottom: 5px; display: block; }
+        .video-card { max-width: 450px; margin: 30px auto; position: relative; border-radius: 20px; overflow: hidden; border: 2px solid var(--main-green); box-shadow: 0 10px 30px rgba(0,255,136,0.3); transition: 0.3s; }
+        .video-card:hover { transform: scale(1.02); }
+        .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--main-green); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+        .play-triangle { width: 0; height: 0; border-top: 15px solid transparent; border-bottom: 15px solid transparent; border-left: 25px solid #000; margin-left: 5px; }
     </style>
 </head>
 <body>
@@ -128,12 +125,17 @@
         <div style="margin: 40px 0;">
             <h2 style="color: var(--main-green);">ВИЖ КАК ПРОМЕНЯМЕ СВЕТА 🎥</h2>
             <p style="color: #888; margin-bottom: 20px;">Реални действия, запечатани на видео</p>
-            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@black.world5024/video/7440958117769973014" data-video-id="7440958117769973014" style="max-width: 600px; min-width: 325px; margin: auto; background: #111; border-radius: 15px;"> 
-                <section> 
-                    <a target="_blank" title="@black.world5024" href="https://www.tiktok.com/@black.world5024?refer=embed">@black.world5024</a> 
-                    <p>Засаждане на дървета с кауза! 🌳</p> 
-                </section> 
-            </blockquote>
+            
+            <div class="video-card">
+                <a href="https://www.tiktok.com/@black.world5024/video/7440958117769973014" target="_blank">
+                    <img src="1000026761.png" alt="Black World Team" style="width: 100%; display: block; filter: brightness(0.7);">
+                    <div class="play-icon"><div class="play-triangle"></div></div>
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, #000); padding: 20px;">
+                        <p style="color: #fff; margin: 0; font-weight: bold;">ПУСНИ ВИДЕОТО В TIKTOK</p>
+                    </div>
+                </a>
+            </div>
+            
             <p style="color: var(--main-green); font-weight: bold; margin-top: 15px;">🎯 Прозрачност във всяка стъпка!</p>
         </div>
 
@@ -151,22 +153,16 @@
                 <p style="color: var(--main-green); font-weight: bold; margin-top: 10px;">+ ПОДАРЪК КЪМ ВСЯКА ПОРЪЧКА 🎁</p>
             </div>
 
-            <ul class="trust-list">
-                <li>✅ <b>Преглед и тест</b> преди заплащане</li>
-                <li>✅ Доставка с <b>Еконт / Спиди</b></li>
-                <li>✅ <b>Реална кауза</b> – доказателства в TikTok</li>
-            </ul>
+            <div style="background:#000; padding:15px; border-radius:12px; border:1px solid #222; margin-bottom:20px;">
+                <p style="margin: 5px 0;">✅ Преглед и тест преди заплащане</p>
+                <p style="margin: 5px 0;">✅ Доставка с Еконт / Спиди</p>
+                <p style="margin: 5px 0;">✅ Реална кауза – доказателства в TikTok</p>
+            </div>
 
             <div class="impact-banner">
                 <div class="stat-item"><b>15+</b><span>МЕСТА 🌳</span></div>
                 <div class="stat-item" style="border-left: 1px solid #333; border-right: 1px solid #333;"><b>850кг</b><span>БОКЛУК 🗑️</span></div>
                 <div class="stat-item"><b>100+</b><span>ДРЪВЧЕТА 🌱</span></div>
-            </div>
-
-            <div class="review-box">
-                <span class="stars">⭐⭐⭐⭐⭐</span>
-                <p style="margin: 0; font-style: italic;">"Тениската е супер, но най-важното е, че видях видеото как засаждат дърветата. Най-сетне нещо истинско!"</p>
-                <small style="color: #666;">— Иван С., София</small>
             </div>
 
             <div class="product-images">
@@ -199,34 +195,16 @@
             </form>
         </div>
 
-        <div style="text-align: left; background: #0a0a0a; padding: 25px; border-radius: 20px; border-left: 4px solid var(--main-green); margin-bottom: 40px;">
-            <h3 style="color: var(--main-green); margin-top: 0;">ТВОЯТ ИЗБОР Е ТВОЕТО ПОСЛАНИЕ</h3>
-            <p>Носейки Black World, ти не просто изглеждаш добре. Ти си част от общност, която действа, когато другите само гледат.</p>
-        </div>
-
         <div style="background: #0a0a0a; border: 1px solid var(--main-green); border-radius: 30px; padding: 30px; margin: 40px 0;">
             <h2 style="color: var(--main-green);">ПОДКРЕПЕТЕ НИ</h2>
-            
-            <p style="margin-bottom: 10px;">1€ = 🗑️ 1 чувал с боклук</p>
-            <div style="display: flex; gap: 12px; margin-bottom: 20px;">
-                <a href="https://paypal.me/kenanZekerie/1" target="_blank" class="donate-btn">1€</a>
-            </div>
-
-            <p style="margin-bottom: 10px;">2€ = 🗑️🗑️ 2 чувала с боклук</p>
-            <div style="display: flex; gap: 12px; margin-bottom: 20px;">
-                <a href="https://paypal.me/kenanZekerie/2" target="_blank" class="donate-btn">2€</a>
-            </div>
-
             <p style="margin-bottom: 10px;">5€ = 🌱 1 засадено дръвче</p>
             <div style="display: flex; gap: 12px; margin-bottom: 25px;">
                 <a href="https://paypal.me/kenanZekerie/5" target="_blank" class="donate-btn d-green">5€</a>
             </div>
-
             <div style="display: flex; gap: 12px; margin-bottom: 25px;">
                 <a href="https://paypal.me/kenanZekerie" target="_blank" class="donate-btn">PAYPAL</a>
                 <a href="https://revolut.me/kenanZekerie" target="_blank" class="donate-btn d-white">REVOLUT</a>
             </div>
-
             <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 15px; border: 1px solid #222; text-align: left;">
                 <p style="margin: 0; font-size: 0.6rem; color: #666;">IBAN Сметка:</p>
                 <p style="margin: 8px 0; font-family: monospace; font-size: 1.1rem; color: var(--main-green); font-weight: bold; overflow-wrap: break-word;">BG16IORT80481095239201</p>
@@ -238,12 +216,6 @@
             <h2 style="color: var(--main-green);">ВРЪЗКА С НАС</h2>
             <a href="tel:0884166258" class="contact-link">📞 Тел: 0884 166 258</a>
             <a href="mailto:blackworld.global@gmail.com" class="contact-link">✉️ Email: blackworld.global@gmail.com</a>
-        </div>
-
-        <div style="margin: 40px 0;">
-            <a href="https://www.tiktok.com/@black.world5024" target="_blank" style="color:#666; margin:0 15px; text-decoration:none; font-weight:bold;">TikTok</a>
-            <a href="https://www.youtube.com/@BlackWorldglobal" target="_blank" style="color:#666; margin:0 15px; text-decoration:none; font-weight:bold;">YouTube</a>
-            <a href="https://x.com/@BlackWorldgl" target="_blank" style="color:#666; margin:0 15px; text-decoration:none; font-weight:bold;">X (Twitter)</a>
         </div>
     </div>
 
@@ -277,8 +249,6 @@
         }
     };
 </script>
-
-<script async src="https://www.tiktok.com/embed.js"></script>
 
 </body>
 </html>
