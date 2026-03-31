@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black World Global | Is this us?</title>
+    
+    <title>Black World Global | Тениски с кауза - Засади дърво</title>
+    <meta name="description" content="Black World Global - Ние не просто чистим природата, а засаждаме бъдеще. Купи тениска с кауза и помогни за засаждането на нови дръвчета.">
+    <meta name="keywords" content="екология, засаждане на дървета, тениски с кауза, Black World Global, опазване на околната среда, България">
+    <meta name="author" content="Black World Global">
+
     <style>
         :root { --main-green: #00ff88; --bg-dark: #050505; --card-bg: #111; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: var(--bg-dark); color: #fff; text-align: center; margin: 0; padding: 0; padding-bottom: 80px; line-height: 1.6; }
@@ -18,62 +23,50 @@
         .tagline-red { text-transform: uppercase; letter-spacing: 6px; color: #ff4444; font-weight: 900; font-size: 1.1rem; margin-top: 10px; text-shadow: 0 0 10px rgba(255,68,68,0.3); }
         .accent-line { width: 40px; height: 3px; background: var(--main-green); margin: 20px auto; border-radius: 2px; }
 
-        .problem-frame {
-            max-width: 450px; 
-            margin: 35px auto; 
-            border-radius: 15px; 
-            border: 2px solid #333; 
-            overflow: hidden; 
-            box-shadow: 0 10px 30px rgba(255,68,68,0.15); 
+        /* Стил за новата секция Контакти */
+        .contact-info {
+            background: #0a0a0a;
+            border-top: 1px solid #222;
+            padding: 40px 20px;
+            margin-top: 50px;
         }
+        .contact-link {
+            color: var(--main-green);
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            font-size: 1.1rem;
+            transition: 0.3s;
+        }
+        .contact-link:hover { text-shadow: 0 0 10px var(--main-green); }
+
+        /* Останалите стилове остават същите */
+        .problem-frame { max-width: 450px; margin: 35px auto; border-radius: 15px; border: 2px solid #333; overflow: hidden; box-shadow: 0 10px 30px rgba(255,68,68,0.15); }
         .problem-frame img { width: 100%; display: block; }
-
-        .model-frame {
-            width: 280px; height: 380px; 
-            margin: 35px auto 30px auto; 
-            border-radius: 25px; 
-            border: 2px solid var(--main-green); 
-            overflow: hidden; 
-            box-shadow: 0 15px 30px rgba(0,255,136,0.25); 
-        }
+        .model-frame { width: 280px; height: 380px; margin: 35px auto 30px auto; border-radius: 25px; border: 2px solid var(--main-green); overflow: hidden; box-shadow: 0 15px 30px rgba(0,255,136,0.25); }
         .model-frame img { width: 100%; height: 100%; object-fit: cover; }
-
         .mission-box { background: #0a0a0a; border: 1px solid #222; padding: 25px; border-radius: 25px; margin: 20px 0; box-shadow: 0 15px 35px rgba(0,0,0,0.6); }
         .comparison { display: flex; gap: 15px; margin-top: 20px; align-items: flex-start; }
         .comp-item { flex: 1; text-align: center; }
-        .comp-item img { width: 100%; border-radius: 15px; border: 2px solid #333; transition: 0.3s; }
+        .comp-item img { width: 100%; border-radius: 15px; border: 2px solid #333; }
         .before { border-color: #ff4444 !important; filter: grayscale(0.4); }
-        .after { border-color: var(--main-green) !important; box-shadow: 0 0 15px rgba(0,255,136,0.1); }
-        .label-text { font-weight: bold; margin-top: 12px; font-size: 0.75rem; letter-spacing: 1px; }
-
+        .after { border-color: var(--main-green) !important; }
         .manifesto { text-align: left; border-left: 4px solid var(--main-green); background: linear-gradient(90deg, rgba(0,255,136,0.05) 0%, transparent 100%); padding: 25px; margin: 40px 0; border-radius: 0 20px 20px 0; }
-        .manifesto h2 { color: var(--main-green); margin-top: 0; letter-spacing: 1px; font-size: 1.4rem; }
-
         .order-card { background: var(--card-bg); border: 2px solid var(--main-green); border-radius: 25px; padding: 25px; margin: 40px 0; text-align: left; }
-        .price-tag { text-align: center; margin-bottom: 25px; }
-        .price-main { font-size: 3rem; font-weight: 900; color: #fff; display: block; line-height: 1; }
-        .price-sub { color: var(--main-green); font-weight: bold; font-size: 0.9rem; }
-
+        .price-main { font-size: 3rem; font-weight: 900; color: #fff; display: block; line-height: 1; text-align: center;}
         .impact-banner { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; background: #1a1a1a; padding: 20px; border-radius: 20px; margin-bottom: 30px; border: 1px solid #222; }
         .stat-item { text-align: center; }
         .stat-item b { font-size: 1.5rem; color: #fff; display: block; }
-        .stat-item span { font-size: 0.6rem; color: var(--main-green); text-transform: uppercase; font-weight: bold; }
-
+        .stat-item span { font-size: 0.6rem; color: var(--main-green); text-transform: uppercase; }
         .product-images { display: flex; gap: 15px; margin: 20px 0; }
         .product-images img { width: 48%; border-radius: 12px; border: 1px solid #333; }
-        
         input, select, textarea { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #333; border-radius: 12px; background: #1a1a1a; color: #fff; box-sizing: border-box; font-size: 1rem; }
-        .order-btn { width: 100%; background: var(--main-green); color: #000; padding: 22px; border: none; border-radius: 15px; font-weight: 900; cursor: pointer; text-transform: uppercase; font-size: 1.2rem; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,255,136,0.2); }
-        
+        .order-btn { width: 100%; background: var(--main-green); color: #000; padding: 22px; border: none; border-radius: 15px; font-weight: 900; cursor: pointer; text-transform: uppercase; font-size: 1.2rem; transition: 0.3s; }
         table { width: 100%; color: #ccc; font-size: 0.85rem; margin-top: 15px; border-collapse: collapse; text-align: center; }
-        th { color: var(--main-green); padding-bottom: 10px; border-bottom: 1px solid #333; }
+        th { color: var(--main-green); border-bottom: 1px solid #333; padding-bottom: 10px;}
         td { border-bottom: 1px solid #222; padding: 10px; }
-
-        .donate-btn { flex: 1; background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1rem; transition: 0.3s; text-align: center; }
-        .d-green { background: var(--main-green) !important; color: #000 !important; }
-
-        .social-link { display: inline-block; margin: 0 15px; color: #666; text-decoration: none; font-size: 1rem; font-weight: bold; transition: 0.3s; }
-        .viber-btn { position: fixed; bottom: 25px; right: 25px; width: 65px; height: 65px; border-radius: 50%; background: #7360f2; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-weight: bold; box-shadow: 0 8px 25px rgba(0,0,0,0.6); z-index: 1000; }
+        .donate-btn { flex: 1; background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 18px; border-radius: 15px; text-decoration: none; font-weight: bold; text-align: center; }
+        .viber-btn { position: fixed; bottom: 25px; right: 25px; width: 65px; height: 65px; border-radius: 50%; background: #7360f2; display: flex; align-items: center; justify-content: center; text-decoration: none; color: white; font-weight: bold; z-index: 1000; box-shadow: 0 8px 25px rgba(0,0,0,0.6); }
     </style>
 </head>
 <body>
@@ -83,78 +76,28 @@
     <div class="hero-header">
         <h1>Black World Global</h1>
         <p class="tagline-red">това ли сме ние?</p>
-        
-        <div class="problem-frame">
-            <img src="1774900514499~2.png" alt="Проблемът">
-        </div>
-
+        <div class="problem-frame"><img src="1774900514499~2.png" alt="Проблемът"></div>
         <div class="accent-line"></div>
-        <p style="max-width: 600px; margin: auto; color: #888; font-size: 1.1rem; font-style: italic; padding: 0 20px;">
-            "Всички гледат... но никой не вижда."
-        </p>
+        <p style="max-width: 600px; margin: auto; color: #888; font-style: italic;">"Всички гледат... но никой не вижда."</p>
     </div>
 
     <div class="container">
-        
-        <div style="max-width: 700px; margin: 60px auto; padding: 0 20px; text-align: center;">
-            <p style="color: var(--main-green); font-size: 1.5rem; line-height: 1.6; font-weight: bold;">
-                „Твоят избор има значение. Бъди промяната, която искаш да видиш.“
-            </p>
-        </div>
-
         <div class="mission-box">
-            <h2 style="color: var(--main-green); margin-top: 0; letter-spacing: 2px; font-size: 1.1rem;">РЕАЛНОСТТА, КОЯТО ПРОМЕНЯМЕ</h2>
+            <h2 style="color: var(--main-green); margin-top: 0; letter-spacing: 2px;">РЕАЛНОСТТА, КОЯТО ПРОМЕНЯМЕ</h2>
             <div class="comparison">
-                <div class="comp-item">
-                    <img src="Picsart_26-03-19_09-57-34-925.jpg" alt="Преди" class="before">
-                    <p class="label-text" style="color: #ff4444;">🛑 ПРЕДИ (ЗАМЪРСЯВАНЕ)</p>
-                </div>
-                <div class="comp-item">
-                    <img src="1774902057174~2.png" alt="След" class="after">
-                    <p class="label-text" style="color: var(--main-green);">✅ СЛЕД (ВЪЗСТАНОВЯВАНЕ)</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="manifesto">
-            <h2>ВДИГНИ ПОГЛЕД!</h2>
-            <p>Живеем в свят, в който погледите ни са забити в екраните, докато светът около нас се дави в пластмаса.</p>
-            <p>Ние от <strong>Black World Global</strong> не просто чистим. Част от средствата от всяка поръчка се влагат директно в <strong>засаждане на нови дръвчета</strong>.</p>
-        </div>
-
-        <div class="hero-header" style="background: transparent; border: none; padding-top: 0;">
-            <p style="text-transform: uppercase; letter-spacing: 2px; color: var(--main-green); font-weight: bold; font-size: 0.8rem;">Носи промяната:</p>
-            <div class="model-frame">
-                <img src="1774899105092.png" alt="Модел">
+                <div class="comp-item"><img src="Picsart_26-03-19_09-57-34-925.jpg" alt="Преди" class="before"><p style="color:#ff4444;">🛑 ПРЕДИ</p></div>
+                <div class="comp-item"><img src="1774902057174~2.png" alt="След" class="after"><p style="color:var(--main-green);">✅ СЛЕД</p></div>
             </div>
         </div>
 
         <div class="order-card" id="shop">
-            <div class="price-tag">
-                <span class="price-main">24.99€</span>
-                <span class="price-sub">+ ПОДАРЪК КЪМ ВСЯКА ПОРЪЧКА 🎁</span>
-            </div>
-
+            <span class="price-main">24.99€</span>
+            <p style="text-align:center; color: var(--main-green); font-weight:bold;">+ ПОДАРЪК КЪМ ВСЯКА ПОРЪЧКА 🎁</p>
+            
             <div class="impact-banner">
                 <div class="stat-item"><b>15+</b><span>МЕСТА 🌳</span></div>
-                <div class="stat-item" style="border-left: 1px solid #333; border-right: 1px solid #333;"><b>850кг</b><span>БОКЛУК 🗑️</span></div>
+                <div class="stat-item"><b>850кг</b><span>БОКЛУК 🗑️</span></div>
                 <div class="stat-item"><b>100+</b><span>ДРЪВЧЕТА 🌱</span></div>
-            </div>
-
-            <div class="product-images">
-                <img src="1774862857379~3.png" alt="Лице">
-                <img src="1774862857379~2.png" alt="Гръб">
-            </div>
-
-            <div style="background: #000; padding: 20px; border-radius: 15px; margin-bottom: 25px; border: 1px solid #222;">
-                <h4 style="margin: 0 0 15px 0; color: var(--main-green); font-size: 0.9rem;">📐 ТАБЛИЦА С РАЗМЕРИ:</h4>
-                <table>
-                    <tr><th>Размер</th><th>Ширина</th><th>Дължина</th></tr>
-                    <tr><td>S</td><td>48 см</td><td>69 см</td></tr>
-                    <tr><td>M</td><td>50 см</td><td>71 см</td></tr>
-                    <tr><td>L</td><td>54 см</td><td>73 см</td></tr>
-                    <tr><td>XL</td><td>58 см</td><td>75 см</td></tr>
-                </table>
             </div>
 
             <form id="orderForm" action="https://formspree.io/f/mojpdenk" method="POST">
@@ -169,37 +112,21 @@
             </form>
         </div>
 
-        <div style="background: #0a0a0a; border: 1px solid var(--main-green); border-radius: 30px; padding: 30px; margin: 40px 0;">
-            <h2 style="color: var(--main-green);">ПОДКРЕПЕТЕ НИ</h2>
-            <div style="display: flex; gap: 12px; margin-bottom: 25px;">
-                <a href="https://paypal.me/kenanZekerie/1" target="_blank" class="donate-btn">1€</a>
-                <a href="https://paypal.me/kenanZekerie/2" target="_blank" class="donate-btn">2€</a>
-                <a href="https://paypal.me/kenanZekerie/5" target="_blank" class="donate-btn d-green">5€</a>
-            </div>
-            <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 15px; border: 1px solid #222; text-align: left;">
-                <p style="margin: 0; font-size: 0.6rem; color: #666;">IBAN Сметка:</p>
-                <p style="margin: 8px 0; font-family: monospace; font-size: 1.1rem; color: var(--main-green); font-weight: bold; overflow-wrap: break-word;">BG16IORT80481095239201</p>
-                <button onclick="copyIBAN()" id="copyBtn" style="background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 8px 15px; border-radius: 8px; cursor: pointer;">Копирай IBAN</button>
-            </div>
+        <div class="contact-info">
+            <h2 style="color: var(--main-green); margin-bottom: 25px;">ВРЪЗКА С НАС</h2>
+            <p style="color: #888;">Имате въпроси или искате да станете доброволец?</p>
+            <a href="tel:0884166258" class="contact-link">📞 Тел: 0884 166 258</a>
+            <a href="mailto:blackworld.global@gmail.com" class="contact-link">✉️ Email: blackworld.global@gmail.com</a>
         </div>
 
-        <div style="margin: 60px 0 20px 0;">
-            <a href="https://www.tiktok.com/@black.world5024" target="_blank" class="social-link">TikTok</a>
-            <a href="https://www.youtube.com/@BlackWorldglobal" target="_blank" class="social-link">YouTube</a>
-            <a href="https://x.com/@BlackWorldgl" target="_blank" class="social-link">X (Twitter)</a>
+        <div style="margin: 40px 0;">
+            <a href="https://www.tiktok.com/@black.world5024" target="_blank" style="color:#666; margin:0 10px; text-decoration:none;">TikTok</a>
+            <a href="https://www.youtube.com/@BlackWorldglobal" target="_blank" style="color:#666; margin:0 10px; text-decoration:none;">YouTube</a>
+            <a href="https://x.com/@BlackWorldgl" target="_blank" style="color:#666; margin:0 10px; text-decoration:none;">X (Twitter)</a>
         </div>
     </div>
 
 <script>
-    function copyIBAN() {
-        const iban = "BG16IORT80481095239201";
-        navigator.clipboard.writeText(iban).then(() => {
-            const btn = document.getElementById('copyBtn');
-            btn.innerHTML = "Копирано! ✅";
-            setTimeout(() => { btn.innerHTML = "Копирай IBAN"; }, 2000);
-        });
-    }
-
     const form = document.getElementById("orderForm");
     form.onsubmit = async (e) => {
         e.preventDefault();
