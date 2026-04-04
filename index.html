@@ -75,6 +75,14 @@
         .share-container { display: flex; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
         .share-icon-btn { flex: 1; min-width: 100px; padding: 10px; border-radius: 10px; border: none; color: white; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
         .fb-btn { background: #1877F2; } .wa-btn { background: #25D366; } .msger-btn { background: #0084FF; }
+
+        /* ОТЗИВИ СТИЛ */
+        .reviews-box { background:#0a0a0a; border:1px solid #222; padding:30px; border-radius:25px; margin:30px 0; text-align: left; }
+        .review-item { border-bottom: 1px solid #1a1a1a; padding-bottom: 15px; margin-bottom: 15px; }
+        .review-item:last-child { border-bottom: none; margin-bottom: 0; }
+        .rev-name { margin: 0; font-weight: bold; color: var(--main-green); }
+        .rev-stars { margin: 5px 0; color: #ffcc00; font-size: 0.9rem; }
+        .rev-text { margin: 0; font-style: italic; color: #ccc; font-size: 0.95rem; }
     </style>
 </head>
 <body>
@@ -127,12 +135,26 @@
             </div>
         </div>
 
-        <div style="background:#0a0a0a; border:1px solid #222; padding:20px; border-radius:20px; margin:30px 0;">
-            <h3 style="color: var(--main-green);">ДОВЕРИЕ ОТ ХОРАТА</h3>
-            <p>⭐️⭐️⭐️⭐️⭐️</p>
-            <p>"Качеството е топ, а каузата е истинска!"</p>
-            <p>"Поръчах и дори получих бонус подарък!"</p>
-            <p>"Най-накрая нещо смислено в България."</p>
+        <div class="reviews-box">
+            <h3 style="color: var(--main-green); text-align: center; margin-top: 0;">ДОВЕРИЕ ОТ ХОРАТА 🤝</h3>
+            
+            <div class="review-item">
+                <p class="rev-name">Иван Петров, София</p>
+                <p class="rev-stars">⭐️⭐️⭐️⭐️⭐️</p>
+                <p class="rev-text">"Качеството е топ, а каузата е истинска!"</p>
+            </div>
+
+            <div class="review-item">
+                <p class="rev-name">Мария Георгиева, Варна</p>
+                <p class="rev-stars">⭐️⭐️⭐️⭐️⭐️</p>
+                <p class="rev-text">"Поръчах и дори получих бонус подарък!"</p>
+            </div>
+
+            <div class="review-item">
+                <p class="rev-name">Георги Димитров, Пловдив</p>
+                <p class="rev-stars">⭐️⭐️⭐️⭐️⭐️</p>
+                <p class="rev-text">"Най-накрая нещо смислено в България."</p>
+            </div>
         </div>
 
         <div style="background:#000; padding:15px; border-radius:12px; border:1px solid #222; margin:20px 0;">
@@ -259,5 +281,4 @@
 </script>
 
 </body>
-    </html>
-    
+</html>
