@@ -25,7 +25,7 @@
             border-bottom: 1px solid #1a1a1a;
         }
         h1 { color: var(--main-green); text-transform: uppercase; letter-spacing: 5px; font-size: 2.2rem; margin: 0; text-shadow: 0 0 20px rgba(0,255,136,0.4); }
-        .tagline-red { text-transform: uppercase; letter-spacing: 6px; color: #ff4444; font-weight: 900; font-size: 1.1rem; margin-top: 10px; text-shadow: 0 0 10px rgba(255,68,68,0.3); }
+        .tagline-red { text-transform: uppercase; letter-spacing: 4px; color: #ff4444; font-weight: 900; font-size: 1.1rem; margin-top: 10px; text-shadow: 0 0 10px rgba(255,68,68,0.3); }
         .accent-line { width: 40px; height: 3px; background: var(--main-green); margin: 20px auto; border-radius: 2px; }
 
         .problem-frame { max-width: 450px; margin: 35px auto; border-radius: 15px; border: 2px solid #333; overflow: hidden; box-shadow: 0 10px 30px rgba(255,68,68,0.15); }
@@ -55,33 +55,8 @@
         
         input, select, textarea { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #333; border-radius: 12px; background: #1a1a1a; color: #fff; box-sizing: border-box; font-size: 1rem; }
         
-        .order-btn { 
-            width: 100%; 
-            background: var(--main-green); 
-            color: #000; 
-            padding: 22px; 
-            border: none; 
-            border-radius: 15px; 
-            font-weight: 900; 
-            cursor: pointer; 
-            text-transform: uppercase; 
-            font-size: 1.2rem; 
-            transition: 0.3s;
-            animation: pulse-green 1.5s infinite;
-        }
-
-        .share-container { display: flex; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
-        .share-icon-btn { flex: 1; min-width: 110px; padding: 12px; border-radius: 12px; border: none; color: white; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.85rem; transition: 0.3s; }
-        .fb-btn { background: #1877F2; }
-        .wa-btn { background: #25D366; }
-        .msger-btn { background: #0084FF; }
-        .share-icon-btn:hover { opacity: 0.8; transform: translateY(-2px); }
-
-        @keyframes pulse-green {
-            0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(0, 255, 136, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
-        }
+        .order-btn { width: 100%; background: var(--main-green); color: #000; padding: 22px; border: none; border-radius: 15px; font-weight: 900; cursor: pointer; text-transform: uppercase; font-size: 1.2rem; transition: 0.3s; animation: pulse-green 1.5s infinite; }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(0, 255, 136, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); } }
         
         table { width: 100%; color: #ccc; font-size: 0.85rem; margin-top: 15px; border-collapse: collapse; text-align: center; }
         th { color: var(--main-green); border-bottom: 1px solid #333; padding-bottom: 10px;}
@@ -96,6 +71,10 @@
 
         .video-card { max-width: 450px; margin: 30px auto; position: relative; border-radius: 20px; overflow: hidden; border: 2px solid var(--main-green); box-shadow: 0 10px 30px rgba(0,255,136,0.3); transition: 0.3s; cursor: pointer; }
         .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: var(--main-green); width: 70px; height: 70px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 20px rgba(0,0,0,0.5); }
+
+        .share-container { display: flex; gap: 8px; margin-bottom: 25px; flex-wrap: wrap; justify-content: center; }
+        .share-icon-btn { flex: 1; min-width: 100px; padding: 10px; border-radius: 10px; border: none; color: white; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 0.8rem; transition: 0.3s; }
+        .fb-btn { background: #1877F2; } .wa-btn { background: #25D366; } .msger-btn { background: #0084FF; }
     </style>
 </head>
 <body>
@@ -105,7 +84,6 @@
     <div class="hero-header">
         <h1>Black World Global</h1>
         <p class="tagline-red">ТВОЯТ СВЯТ УМИРА. ТИ ГЛЕДАШ.</p>
-        
         <div class="problem-frame">
             <img src="1774900514499~2.png" alt="Проблемът">
         </div>
@@ -127,9 +105,7 @@
                     <p style="color:var(--main-green); font-weight:bold;">✅ СЛЕД</p>
                 </div>
             </div>
-            <p style="color:#fff; font-weight:bold; margin-top:15px;">
-                🔥 Над 100+ души вече подкрепиха каузата
-            </p>
+            <p style="color:#fff; font-weight:bold; margin-top:15px;">🔥 Над 100+ души вече подкрепиха каузата</p>
         </div>
 
         <div class="manifesto">
@@ -151,19 +127,28 @@
             </div>
         </div>
 
-        <div class="hero-header" style="background: transparent; border: none; padding-top: 0;">
-            <div class="model-frame">
-                <img src="1774899105092.png" alt="Модел">
-            </div>
+        <div style="background:#0a0a0a; border:1px solid #222; padding:20px; border-radius:20px; margin:30px 0;">
+            <h3 style="color: var(--main-green);">ДОВЕРИЕ ОТ ХОРАТА</h3>
+            <p>⭐️⭐️⭐️⭐️⭐️</p>
+            <p>"Качеството е топ, а каузата е истинска!"</p>
+            <p>"Поръчах и дори получих бонус подарък!"</p>
+            <p>"Най-накрая нещо смислено в България."</p>
+        </div>
+
+        <div style="background:#000; padding:15px; border-radius:12px; border:1px solid #222; margin:20px 0;">
+            <p>🔒 100% гаранция - Ако не ти хареса – връщаш продукта.</p>
+        </div>
+
+        <div class="model-frame">
+            <img src="1774899105092.png" alt="Модел">
         </div>
 
         <div class="order-card" id="shop">
-            
             <div style="text-align: center; margin-bottom: 15px;"><small style="color: #888;">СПОДЕЛИ КАУЗАТА:</small></div>
             <div class="share-container">
                 <a href="https://www.facebook.com/sharer/sharer.php?u=https://blackworldglobal.github.io/" target="_blank" class="share-icon-btn fb-btn">Facebook</a>
                 <a href="fb-messenger://share/?link=https://blackworldglobal.github.io/" target="_blank" class="share-icon-btn msger-btn">Messenger</a>
-                <a href="https://api.whatsapp.com/send?text=Виж тази кауза! Купи тениска - засади дърво: https://blackworldglobal.github.io/" target="_blank" class="share-icon-btn wa-btn">WhatsApp</a>
+                <a href="https://api.whatsapp.com/send?text=Виж тази кауза! https://blackworldglobal.github.io/" target="_blank" class="share-icon-btn wa-btn">WhatsApp</a>
             </div>
 
             <div style="text-align: center; margin-bottom: 25px;">
@@ -178,6 +163,24 @@
                 <div class="stat-item"><b>100+</b><span>ДРЪВЧЕТА 🌱</span></div>
             </div>
 
+            <div class="product-images">
+                <img src="1774862857379~3.png" alt="Лице">
+                <img src="1774862857379~2.png" alt="Гръб">
+            </div>
+
+            <div style="background: #000; padding: 20px; border-radius: 15px; margin-bottom: 25px; border: 1px solid #222;">
+                <h4 style="margin: 0 0 15px 0; color: var(--main-green);">📐 ТАБЛИЦА С РАЗМЕРИ:</h4>
+                <table>
+                    <tr><th>Размер</th><th>Ширина</th><th>Дължина</th></tr>
+                    <tr><td>S</td><td>48 см</td><td>69 см</td></tr>
+                    <tr><td>M</td><td>50 см</td><td>71 см</td></tr>
+                    <tr><td>L</td><td>54 см</td><td>73 см</td></tr>
+                    <tr><td>XL</td><td>58 см</td><td>75 см</td></tr>
+                </table>
+            </div>
+
+            <p style="color: #ff4444; font-weight: bold; text-align: center; margin-bottom: 10px;">🛑 ОГРАНИЧЕНА СЕРИЯ – ОСТАНАЛИ ПОД 50 БРОЯ!</p>
+
             <form id="orderForm" action="https://formspree.io/f/mojpdenk" method="POST">
                 <input type="text" name="Име" placeholder="Име и Фамилия" required>
                 <input type="tel" name="Телефон" placeholder="Телефон" required>
@@ -186,17 +189,41 @@
                     <option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option>
                 </select>
                 <textarea name="Адрес" placeholder="Офис на Еконт/Спиди" required style="height: 100px;"></textarea>
+
+                <div style="background:#0a0a0a; border:1px solid var(--main-green); padding:15px; border-radius:12px; margin:15px 0;">
+                    <label style="display:flex; align-items:center; gap:10px; cursor:pointer;">
+                        <input type="checkbox" name="Допълнително_дърво" value="Да" style="width:20px; height:20px; accent-color: var(--main-green);">
+                        <span style="font-size:0.95rem;">🔥 Само сега: добави още 1 засадено дърво за <b>5€</b></span>
+                    </label>
+                </div>
+
                 <button type="submit" id="submitBtn" class="order-btn">ПОРЪЧАЙ С КАУЗА 🌍</button>
             </form>
         </div>
 
         <div style="background: #0a0a0a; border: 1px solid var(--main-green); border-radius: 30px; padding: 30px; margin: 40px 0;">
             <h2 style="color: var(--main-green);">ПОДКРЕПЕТЕ НИ</h2>
+            <p>1€ = 🗑️ 1 чувал с боклук</p>
+            <div style="display: flex; gap: 12px; margin-bottom: 20px;"><a href="https://paypal.me/kenanZekerie/1" target="_blank" class="donate-btn">1€</a></div>
+            <p>2€ = 🗑️🗑️ 2 чувала с боклук</p>
+            <div style="display: flex; gap: 12px; margin-bottom: 20px;"><a href="https://paypal.me/kenanZekerie/2" target="_blank" class="donate-btn">2€</a></div>
+            <p>5€ = 🌱 1 засадено дръвче</p>
+            <div style="display: flex; gap: 12px; margin-bottom: 25px;"><a href="https://paypal.me/kenanZekerie/5" target="_blank" class="donate-btn d-green">5€</a></div>
+            <div style="display: flex; gap: 12px; margin-bottom: 25px;">
+                <a href="https://paypal.me/kenanZekerie" target="_blank" class="donate-btn">PAYPAL</a>
+                <a href="https://revolut.me/kenanZekerie" target="_blank" class="donate-btn d-white">REVOLUT</a>
+            </div>
             <div style="background: rgba(0,0,0,0.6); padding: 20px; border-radius: 15px; border: 1px solid #222; text-align: left;">
                 <p style="margin: 0; font-size: 0.6rem; color: #666;">IBAN Сметка:</p>
                 <p style="margin: 8px 0; font-family: monospace; font-size: 1.1rem; color: var(--main-green); font-weight: bold;">BG16IORT80481095239201</p>
                 <button onclick="copyIBAN()" id="copyBtn" style="background: transparent; color: var(--main-green); border: 1px solid var(--main-green); padding: 8px 15px; border-radius: 8px; cursor: pointer;">Копирай IBAN</button>
             </div>
+        </div>
+
+        <div style="background: #0a0a0a; padding: 30px; border-radius: 30px; border: 1px solid #222; margin: 40px 0;">
+            <h2 style="color: var(--main-green);">ВРЪЗКА С НАС</h2>
+            <a href="tel:0884166258" class="contact-link">📞 Тел: 0884 166 258</a>
+            <a href="mailto:blackworld.global@gmail.com" class="contact-link">✉️ Email: blackworld.global@gmail.com</a>
         </div>
     </div>
 
@@ -232,4 +259,5 @@
 </script>
 
 </body>
-</html>
+    </html>
+    
